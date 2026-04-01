@@ -32,8 +32,10 @@ Statistics) data from 2019 to 2024.
 ## 🗂️ Project Structure
 ```
 Labour_Distribution_Project/
+├── data/
+│   └── raw/        ← place downloaded BLS + automation files here
 │
-├── notebooks/
+│── notebooks/
 │   └── labour_distribution_project_code.ipynb
 │
 ├── charts/
@@ -91,4 +93,4 @@ Labour_Distribution_Project/
 ## 👤 Author
 
 **Muhammad Talha**
-[LinkedIn]([https://linkedin.com/in/yourprofile](https://www.linkedin.com/in/muhammad-talha04))
+[LinkedIn](https://www.linkedin.com/in/muhammad-talha04)
