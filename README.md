@@ -33,7 +33,7 @@ Statistics) data from 2019 to 2024.
 ```
 Labour_Distribution_Project/
 ├── data/
-│   └── raw/        ← place downloaded BLS + automation files here
+│   └── raw/        
 │
 │── notebooks/
 │   └── labour_distribution_project_code.ipynb
@@ -55,6 +55,9 @@ Labour_Distribution_Project/
 ---
 
 ## 📦 Data Sources
+
+> ⚠️ Data files are not included in this repository due to size limits.
+> Download them directly from the source links.
 
 - **BLS Occupational Employment & Wage Statistics (OEWS):**
   https://www.bls.gov/oes/tables.htm
@@ -83,7 +86,7 @@ Labour_Distribution_Project/
 2. Download the raw data files (links above) into `data/raw/`
 3. Install dependencies:
 ```bash
-   pip install pandas numpy matplotlib scipy statsmodels openpyxl
+   pip install -r requirements.txt
 ```
 4. Open `notebooks/labour_distribution_project_code.ipynb` in Jupyter or VS Code
 5. Run all cells
