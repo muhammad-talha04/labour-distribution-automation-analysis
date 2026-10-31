@@ -6,13 +6,32 @@ Statistics) data from 2019 to 2024.
 
 ---
 
-## 📌 Key Findings
+## 📌 Key Findings (BLS, May 2024)
 
-- **Statistically significant negative relationship** between automation risk 
-  and employment growth (slope: -0.1841, R²: 0.089, p < 0.0001)
-- **High-risk occupations pay ~40% less** than low-risk ones ($51k vs $86k avg)
-- **296 million workers** are in occupations with more than 70% automation risk
-- Top at-risk jobs: Retail Salespersons, Cashiers, Office Clerks, Truck Drivers
+- **High-risk occupations pay about 40% less.** Across 283 occupations with an
+  automation probability of 70% or more, the average median wage is $51,423 a
+  year. Across 198 low-risk occupations (under 30%), it is $86,048: a gap of
+  $34,625.
+- **55.6 million US workers** hold jobs in those high-risk occupations.
+- Large high-risk occupations include Retail Salespersons, Cashiers, Office
+  Clerks and Truck Drivers.
+
+### Correction in progress
+
+The first version of the employment-change analysis (2019 to 2024) summed the
+industry breakdown rows in the BLS national file, so it counted the same
+workers several times. I fixed the filter in the notebook (cross-industry rows
+only, `naics == '000000'`) and cleared the affected outputs. I will publish the
+employment-change slope and its charts again after re-running the notebook.
+The wage results above come from the cross-industry rows and are unaffected.
+
+### Limitations
+
+- The automation probabilities come from Frey and Osborne (2013), not from a
+  recent model of AI exposure.
+- The comparison is correlational and works at the occupation level. It does
+  not show that automation risk causes lower pay.
+- Wage averages weight each occupation equally, not by headcount.
 
 ---
 
@@ -20,12 +39,12 @@ Statistics) data from 2019 to 2024.
 
 | Chart | Description |
 |-------|-------------|
-| `disruption_vs_employment_change.png` | Scatter: automation risk vs employment change |
-| `disruption_trend.png` | With OLS trend line |
-| `disruption_validated.png` | With 95% confidence interval |
-| `covid_sensitivity.png` | Full period vs Post-COVID comparison |
 | `wage_vs_automation_risk.png` | Bubble chart: risk vs wages |
 | `wage_vs_risk_clean.png` | Bar chart: wage and workers by risk tier |
+| `disruption_vs_employment_change.png` | Risk vs employment change (stale, re-run pending) |
+| `disruption_trend.png` | OLS trend line (stale, re-run pending) |
+| `disruption_validated.png` | 95% confidence interval (stale, re-run pending) |
+| `covid_sensitivity.png` | Full period vs post-COVID (stale, re-run pending) |
 
 ---
 
